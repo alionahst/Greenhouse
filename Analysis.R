@@ -5,3 +5,5 @@
 library("readxl")
 Data <- read_excel("210129_Greenhouse_results.xlsx")
 Data <- Data[-12]
+
+if (!dir.exists("Graphs")) dir.create("Graphs")

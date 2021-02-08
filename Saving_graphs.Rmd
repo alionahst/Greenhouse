@@ -1,3 +1,24 @@
+---
+title: "Saving graphs"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(suffix = ".png", fig.path = "graphs/", res = 100)
+#knitr options to save all the graphics in the folder “results” in png format with a resolution of 100 dpi.
+```
+
+```{r}
+library("readxl")
+Data <- read_excel("210129_Greenhouse_results.xlsx")
+Data <- Data[-12]
+
 
 d <- rep("06/11/20", 6)
 d <- c(d, rep("11/11/20", 6))
@@ -11,6 +32,8 @@ Data$Date2 <- as.Date(Data$Date2, format='%d/%m/%y')
 
 
 library(ggplot2)
+
+
 
 # Leaf number
 #ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = Leaf_number, color = Treatment, na.rm=TRUE )) + geom_point() + geom_smooth()
@@ -46,4 +69,8 @@ ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = EC, color = Treatment,
 ggplot(Data, aes(x=Date2, y = EC, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of EC evolution between Avena Fatua and Triticum aestivum", y="EC", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
 
+
+if (!dir.exists("Graphs")) dir.create("Graphs")
+
+```
 

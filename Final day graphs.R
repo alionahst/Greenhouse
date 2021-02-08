@@ -20,7 +20,8 @@ StemGraph<- StemGraph +geom_boxplot(
   facet_wrap(~Species)+ 
   theme(legend.position = "none")+
   ggtitle("Stem length under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
 StemGraph
 
 #Leaf number graph
@@ -33,7 +34,8 @@ LeafGraph<- LeafGraph +geom_boxplot(
   facet_wrap(~Species)+ 
   theme(legend.position = "none") +
   ggtitle("Leaf number under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
 LeafGraph
 
 #Root length graph
@@ -46,7 +48,8 @@ RootGraph<- RootGraph +geom_boxplot(
   facet_wrap(~Species)+ 
   theme(legend.position = "none")+
   ggtitle("Root length under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
 RootGraph
 
 #Fresh weight graph 
@@ -59,7 +62,8 @@ FreshGraph<- FreshGraph +geom_boxplot(
   facet_wrap(~Species)+ 
   theme(legend.position = "none")+
   ggtitle("Fresh weight under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
 FreshGraph
 
 
@@ -73,8 +77,11 @@ DryGraph<- DryGraph +geom_boxplot(
   facet_wrap(~Species)+ 
   theme(legend.position = "none")+
   ggtitle("Dry weight under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
 DryGraph
+
+
 
 
 ###IN CASE THAT WE WANT TO KEEP THEM TOGETHER just remove "facet_wrap" and change "fill(Treatment2)" to "fill(Species")
@@ -87,3 +94,4 @@ DryGraph<- DryGraph +geom_boxplot(
   ggtitle("Dry weight under different treatment")+ 
   theme(plot.title = element_text(hjust = 0.5))
 DryGraph
+

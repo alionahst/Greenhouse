@@ -84,7 +84,6 @@ DryGraph<- DryGraph +geom_boxplot(
   aes(fill = Species),
   position = position_dodge(0.75)) +
   labs(y= "Dry weight (g)", x = "Treatment")+ 
-  theme(legend.position = "none")+
   ggtitle("Dry weight under different treatment")+ 
   theme(plot.title = element_text(hjust = 0.5))
 DryGraph

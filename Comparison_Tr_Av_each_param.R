@@ -15,7 +15,11 @@ LeafGraph<- LeafGraph +geom_boxplot(
   position = position_dodge(0.75)) +
   labs(y= "Leaf number", x = "Treatment")+ 
   ggtitle("Leaf number under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  annotate(geom="text", x=1, y=10, label="*", cex= 8.5, color="black")+
+  annotate(geom="text", x=2, y=10, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=3, y=10, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=10, label="ns", cex= 7, color="black")
 LeafGraph
 
 # normality LEAF NUMBER : True, false, True, true
@@ -41,7 +45,11 @@ StemGraph<- StemGraph +geom_boxplot(
   position = position_dodge(0.75)) +
   labs(y= "Stem length (cm)", x = "Treatment")+ 
   ggtitle("Stem length under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  annotate(geom="text", x=1, y=70, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=2, y=70, label="**", cex= 8.5, color="black")+
+  annotate(geom="text", x=3, y=70, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=70, label="ns", cex= 7, color="black")
 StemGraph
 
 
@@ -69,7 +77,11 @@ RootGraph<- RootGraph +geom_boxplot(
   position = position_dodge(0.75)) +
   labs(y= "Root length (cm)", x = "Treatment")+ 
   ggtitle("Root length under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  annotate(geom="text", x=1, y=40, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=2, y=40, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=3, y=40, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=40, label="ns", cex= 7, color="black")
 RootGraph
 
 # normality: True, true, false, true
@@ -97,7 +109,11 @@ DryGraph<- DryGraph +geom_boxplot(
   position = position_dodge(0.75)) +
   labs(y= "Dry weight (g)", x = "Treatment")+ 
   ggtitle("Dry weight under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5))+
+  annotate(geom="text", x=1, y=8.5, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=2, y=8.5, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=3, y=8.5, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=8.5, label="*", cex= 8.5, color="black")
 DryGraph
 
 # normality for all DRY WEIGHT 
@@ -123,7 +139,11 @@ FreshGraph<- FreshGraph +geom_boxplot(
   position = position_dodge(0.75)) +
   labs(y= "Fresh weight (g)", x = "Treatment")+ 
   ggtitle("Fresh weight under different treatment")+ 
-  theme(plot.title = element_text(hjust = 0.5)) 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  annotate(geom="text", x=1, y=10, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=2, y=10, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=3, y=10, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=10, label="*", cex= 8.5, color="black")
 FreshGraph
 
 # normality for all FRESH WEIGHT 

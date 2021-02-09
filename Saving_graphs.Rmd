@@ -105,8 +105,8 @@ StemGraphA<- StemGraphA +geom_boxplot(
   theme(legend.position = "none") +
   ggtitle("Avena")+ 
   theme(plot.title = element_text(hjust = 0.5))+
-  annotate(geom="text", x=1, y=70, label="a", cex= 6, color="black")+
-  annotate(geom="text", x=2, y=70, label="ab", cex= 6, color="black")+
+  annotate(geom="text", x=1, y=70, label="ab", cex= 6, color="black")+
+  annotate(geom="text", x=2, y=70, label="a", cex= 6, color="black")+
   annotate(geom="text", x=3, y=70, label="b", cex= 6, color="black")+
   annotate(geom="text", x=4, y=70, label="c", cex= 6, color="black")
 
@@ -131,7 +131,9 @@ StemGraph <- ggarrange(
 StemGraph <-   annotate_figure(StemGraph,
                                top = text_grob("Stem length under different treatments", face = "bold", size = 14)) 
 StemGraph
+
 ```
+
 
 ```{r leaf number within species}
 #Leaf number graph

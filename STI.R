@@ -344,7 +344,7 @@ STI_DW_Tri_200 <- as.data.frame(STI200_DW)
 #table
 STI_TR_200 <- data.frame(STI_LN_Tri_200 ,STI_SL_Tri_200 , STI_RL_Tri_200 , STI_FW_Tri_200 , STI_DW_Tri_200)
 
-#Drought
+####Drought####
 #Leaf number
 DTI01_LN <- Data.triticum$Leaf_number[19] / Data.triticum$Leaf_number[1]
 DTI02_LN <- Data.triticum$Leaf_number[20] / Data.triticum$Leaf_number[2]

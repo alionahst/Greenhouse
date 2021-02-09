@@ -395,3 +395,781 @@ FreshGraph<- FreshGraph +geom_boxplot(
 FreshGraph
 ```
 
+## MFV graph
+
+```{r STI}
+Data.avena <- Data.last[Data.last$Species == "Avena",]
+Data.triticum <- Data.last[Data.last$Species == "Triticum",]
+
+####Avena####
+#Treatment 100
+#STI Leaf number
+
+STI_ln_1 <- Data.avena$Leaf_number[7] / Data.avena$Leaf_number[1]
+STI_ln_2 <- Data.avena$Leaf_number[8] / Data.avena$Leaf_number[2]
+STI_ln_3 <- Data.avena$Leaf_number[9] / Data.avena$Leaf_number[3]
+STI_ln_4 <- Data.avena$Leaf_number[10] / Data.avena$Leaf_number[4]
+STI_ln_5 <- Data.avena$Leaf_number[11] / Data.avena$Leaf_number[5]
+STI_ln_6 <- Data.avena$Leaf_number[12] / Data.avena$Leaf_number[6]
+
+STI100_AV_LN <- c(STI_ln_1, STI_ln_2, STI_ln_3, STI_ln_4, STI_ln_5, STI_ln_6)
+STI_LN_Avena <- as.data.frame(STI100_AV_LN)
+
+#STI Stem length
+
+STI_sl_1 <- Data.avena$Stem_length[7] / Data.avena$Stem_length[1]
+STI_sl_2 <- Data.avena$Stem_length[8] / Data.avena$Stem_length[2]
+STI_sl_3 <- Data.avena$Stem_length[9] / Data.avena$Stem_length[3]
+STI_sl_4 <- Data.avena$Stem_length[10] / Data.avena$Stem_length[4]
+STI_sl_5 <- Data.avena$Stem_length[11] / Data.avena$Stem_length[5]
+STI_sl_6 <- Data.avena$Stem_length[12] / Data.avena$Stem_length[6]
+
+STI100_AV_SL <- c(STI_sl_1, STI_sl_2, STI_sl_3, STI_sl_4, STI_sl_5, STI_sl_6)
+STI_SL_Avena <- as.data.frame(STI100_AV_SL)
+
+
+#STI Root length
+
+STI_rl_1 <- Data.avena$Root_Length[7] / Data.avena$Root_Length[1]
+STI_rl_2 <- Data.avena$Root_Length[8] / Data.avena$Root_Length[2]
+STI_rl_3 <- Data.avena$Root_Length[9] / Data.avena$Root_Length[3]
+STI_rl_4 <- Data.avena$Root_Length[10] / Data.avena$Root_Length[4]
+STI_rl_5 <- Data.avena$Root_Length[11] / Data.avena$Root_Length[5]
+STI_rl_6 <- Data.avena$Root_Length[12] / Data.avena$Root_Length[6]
+
+STI100_AV_RL <- c(STI_rl_1, STI_rl_2, STI_rl_3, STI_rl_4, STI_rl_5, STI_rl_6)
+STI_RL_Avena <- as.data.frame(STI100_AV_RL)
+
+
+#STI Fresh weight
+
+STI_fw_1 <- Data.avena$Fresh_weight[7] / Data.avena$Fresh_weight[1]
+STI_fw_2 <- Data.avena$Fresh_weight[8] / Data.avena$Fresh_weight[2]
+STI_fw_3 <- Data.avena$Fresh_weight[9] / Data.avena$Fresh_weight[3]
+STI_fw_4 <- Data.avena$Fresh_weight[10] / Data.avena$Fresh_weight[4]
+STI_fw_5 <- Data.avena$Fresh_weight[11] / Data.avena$Fresh_weight[5]
+STI_fw_6 <- Data.avena$Fresh_weight[12] / Data.avena$Fresh_weight[6]
+
+STI100_AV_FW <- c(STI_fw_1, STI_fw_2, STI_fw_3, STI_fw_4, STI_fw_5, STI_fw_6)
+STI_FW_Avena <- as.data.frame(STI100_AV_FW)
+
+#STI Dry weight
+
+STI_dw_1 <- Data.avena$Dry_weight[7] / Data.avena$Dry_weight[1]
+STI_dw_2 <- Data.avena$Dry_weight[8] / Data.avena$Dry_weight[2]
+STI_dw_3 <- Data.avena$Dry_weight[9] / Data.avena$Dry_weight[3]
+STI_dw_4 <- Data.avena$Dry_weight[10] / Data.avena$Dry_weight[4]
+STI_dw_5 <- Data.avena$Dry_weight[11] / Data.avena$Dry_weight[5]
+STI_dw_6 <- Data.avena$Dry_weight[12] / Data.avena$Dry_weight[6]
+
+STI100_AV_DW <- c(STI_dw_1, STI_dw_2, STI_dw_3, STI_dw_4, STI_dw_5, STI_dw_6)
+STI_DW_Avena <- as.data.frame(STI100_AV_DW)
+
+#table
+STI_AV_100 <- data.frame( STI_LN_Avena ,STI_SL_Avena, STI_RL_Avena, STI_FW_Avena, STI_DW_Avena)
+
+
+
+
+#Treatment  200
+#STI Leaf number
+
+STI_ln_01 <- Data.avena$Leaf_number[13] / Data.avena$Leaf_number[1]
+STI_ln_02 <- Data.avena$Leaf_number[14] / Data.avena$Leaf_number[2]
+STI_ln_03 <- Data.avena$Leaf_number[15] / Data.avena$Leaf_number[3]
+STI_ln_04 <- Data.avena$Leaf_number[16] / Data.avena$Leaf_number[4]
+STI_ln_05 <- Data.avena$Leaf_number[17] / Data.avena$Leaf_number[5]
+STI_ln_06 <- Data.avena$Leaf_number[18] / Data.avena$Leaf_number[6]
+
+STI200_AV_LN <- c(STI_ln_01, STI_ln_02, STI_ln_03, STI_ln_04, STI_ln_05, STI_ln_06)
+STI_LN_Avena_200 <- as.data.frame(STI200_AV_LN)
+
+#STI Stem length
+
+STI_sl_01 <- Data.avena$Stem_length[13] / Data.avena$Stem_length[1]
+STI_sl_02 <- Data.avena$Stem_length[14] / Data.avena$Stem_length[2]
+STI_sl_03 <- Data.avena$Stem_length[15] / Data.avena$Stem_length[3]
+STI_sl_04 <- Data.avena$Stem_length[16] / Data.avena$Stem_length[4]
+STI_sl_05 <- Data.avena$Stem_length[17] / Data.avena$Stem_length[5]
+STI_sl_06 <- Data.avena$Stem_length[18] / Data.avena$Stem_length[6]
+
+STI200_AV_SL <- c(STI_sl_01, STI_sl_02, STI_sl_03, STI_sl_04, STI_sl_05, STI_sl_06)
+STI_SL_Avena_200 <- as.data.frame(STI200_AV_SL)
+
+
+#STI Root length
+
+STI_rl_01 <- Data.avena$Root_Length[13] / Data.avena$Root_Length[1]
+STI_rl_02 <- Data.avena$Root_Length[14] / Data.avena$Root_Length[2]
+STI_rl_03 <- Data.avena$Root_Length[15] / Data.avena$Root_Length[3]
+STI_rl_04 <- Data.avena$Root_Length[16] / Data.avena$Root_Length[4]
+STI_rl_05 <- Data.avena$Root_Length[17] / Data.avena$Root_Length[5]
+STI_rl_06 <- Data.avena$Root_Length[18] / Data.avena$Root_Length[6]
+
+STI200_AV_RL <- c(STI_rl_01, STI_rl_02, STI_rl_03, STI_rl_04, STI_rl_05, STI_rl_06)
+STI_RL_Avena_200 <- as.data.frame(STI200_AV_RL)
+
+
+#STI Fresh weight
+
+STI_fw_01 <- Data.avena$Fresh_weight[13] / Data.avena$Fresh_weight[1]
+STI_fw_02 <- Data.avena$Fresh_weight[14] / Data.avena$Fresh_weight[2]
+STI_fw_03 <- Data.avena$Fresh_weight[15] / Data.avena$Fresh_weight[3]
+STI_fw_04 <- Data.avena$Fresh_weight[16] / Data.avena$Fresh_weight[4]
+STI_fw_05 <- Data.avena$Fresh_weight[17] / Data.avena$Fresh_weight[5]
+STI_fw_06 <- Data.avena$Fresh_weight[18] / Data.avena$Fresh_weight[6]
+
+STI200_AV_FW <- c(STI_fw_01, STI_fw_02, STI_fw_03, STI_fw_04, STI_fw_05, STI_fw_06)
+STI_FW_Avena_200 <- as.data.frame(STI200_AV_FW)
+
+#STI Dry weight
+
+STI_dw_01 <- Data.avena$Dry_weight[13] / Data.avena$Dry_weight[1]
+STI_dw_02 <- Data.avena$Dry_weight[14] / Data.avena$Dry_weight[2]
+STI_dw_03 <- Data.avena$Dry_weight[15] / Data.avena$Dry_weight[3]
+STI_dw_04 <- Data.avena$Dry_weight[16] / Data.avena$Dry_weight[4]
+STI_dw_05 <- Data.avena$Dry_weight[17] / Data.avena$Dry_weight[5]
+STI_dw_06 <- Data.avena$Dry_weight[18] / Data.avena$Dry_weight[6]
+
+STI200_AV_DW <- c(STI_dw_01, STI_dw_02, STI_dw_03, STI_dw_04, STI_dw_05, STI_dw_06)
+STI_DW_Avena_200 <- as.data.frame(STI200_AV_DW)
+
+#table
+STI_AV_200 <- data.frame(STI_LN_Avena_200 ,STI_SL_Avena_200, STI_RL_Avena_200, STI_FW_Avena_200, STI_DW_Avena_200)
+
+
+
+#Drought
+#DTI Leaf number
+
+DTI_ln_01 <- Data.avena$Leaf_number[19] / Data.avena$Leaf_number[1]
+DTI_ln_02 <- Data.avena$Leaf_number[20] / Data.avena$Leaf_number[2]
+DTI_ln_03 <- Data.avena$Leaf_number[21] / Data.avena$Leaf_number[3]
+DTI_ln_04 <- Data.avena$Leaf_number[22] / Data.avena$Leaf_number[4]
+DTI_ln_05 <- Data.avena$Leaf_number[23] / Data.avena$Leaf_number[5]
+DTI_ln_06 <- Data.avena$Leaf_number[24] / Data.avena$Leaf_number[6]
+
+DTI_AV_LN <- c(DTI_ln_01, DTI_ln_02, DTI_ln_03, DTI_ln_04, DTI_ln_05, DTI_ln_06)
+DTI_LN_Avena <- as.data.frame(DTI_AV_LN)
+
+#DTI Stem length
+
+DTI_sl_01 <- Data.avena$Stem_length[19] / Data.avena$Stem_length[1]
+DTI_sl_02 <- Data.avena$Stem_length[20] / Data.avena$Stem_length[2]
+DTI_sl_03 <- Data.avena$Stem_length[21] / Data.avena$Stem_length[3]
+DTI_sl_04 <- Data.avena$Stem_length[22] / Data.avena$Stem_length[4]
+DTI_sl_05 <- Data.avena$Stem_length[23] / Data.avena$Stem_length[5]
+DTI_sl_06 <- Data.avena$Stem_length[24] / Data.avena$Stem_length[6]
+
+DTI_AV_SL <- c(DTI_sl_01, DTI_sl_02, DTI_sl_03, DTI_sl_04, DTI_sl_05, DTI_sl_06)
+DTI_SL_Avena <- as.data.frame(DTI_AV_SL)
+
+
+#DTI Root length
+
+DTI_rl_01 <- Data.avena$Root_Length[19] / Data.avena$Root_Length[1]
+DTI_rl_02 <- Data.avena$Root_Length[20] / Data.avena$Root_Length[2]
+DTI_rl_03 <- Data.avena$Root_Length[21] / Data.avena$Root_Length[3]
+DTI_rl_04 <- Data.avena$Root_Length[22] / Data.avena$Root_Length[4]
+DTI_rl_05 <- Data.avena$Root_Length[23] / Data.avena$Root_Length[5]
+DTI_rl_06 <- Data.avena$Root_Length[24] / Data.avena$Root_Length[6]
+
+DTI_AV_RL <- c(DTI_rl_01, DTI_rl_02, DTI_rl_03, DTI_rl_04, DTI_rl_05, DTI_rl_06)
+DTI_RL_Avena <- as.data.frame(DTI_AV_RL)
+
+
+#DTI Fresh weight
+
+DTI_fw_01 <- Data.avena$Fresh_weight[19] / Data.avena$Fresh_weight[1]
+DTI_fw_02 <- Data.avena$Fresh_weight[20] / Data.avena$Fresh_weight[2]
+DTI_fw_03 <- Data.avena$Fresh_weight[21] / Data.avena$Fresh_weight[3]
+DTI_fw_04 <- Data.avena$Fresh_weight[22] / Data.avena$Fresh_weight[4]
+DTI_fw_05 <- Data.avena$Fresh_weight[23] / Data.avena$Fresh_weight[5]
+DTI_fw_06 <- Data.avena$Fresh_weight[24] / Data.avena$Fresh_weight[6]
+
+DTI_AV_FW <- c(DTI_fw_01, DTI_fw_02, DTI_fw_03, DTI_fw_04, DTI_fw_05, DTI_fw_06)
+DTI_FW_Avena <- as.data.frame(DTI_AV_FW)
+
+#STI Dry weight
+
+DTI_dw_01 <- Data.avena$Dry_weight[19] / Data.avena$Dry_weight[1]
+DTI_dw_02 <- Data.avena$Dry_weight[20] / Data.avena$Dry_weight[2]
+DTI_dw_03 <- Data.avena$Dry_weight[21] / Data.avena$Dry_weight[3]
+DTI_dw_04 <- Data.avena$Dry_weight[22] / Data.avena$Dry_weight[4]
+DTI_dw_05 <- Data.avena$Dry_weight[23] / Data.avena$Dry_weight[5]
+DTI_dw_06 <- Data.avena$Dry_weight[24] / Data.avena$Dry_weight[6]
+
+DTI_AV_DW <- c(DTI_dw_01, DTI_dw_02, DTI_dw_03, DTI_dw_04, DTI_dw_05, DTI_dw_06)
+DTI_DW_Avena <- as.data.frame(DTI_AV_DW)
+
+#table
+DTI_AV <- data.frame(DTI_LN_Avena ,DTI_SL_Avena, DTI_RL_Avena, DTI_FW_Avena, DTI_DW_Avena)
+
+
+####Triticum####
+#TRATMENT 100
+#Leaf number
+STI01_LN <- Data.triticum$Leaf_number[7] / Data.triticum$Leaf_number[1]
+STI02_LN <- Data.triticum$Leaf_number[8] / Data.triticum$Leaf_number[2]
+STI03_LN <- Data.triticum$Leaf_number[9] / Data.triticum$Leaf_number[3]
+STI04_LN <- Data.triticum$Leaf_number[10] / Data.triticum$Leaf_number[4]
+STI05_LN <- Data.triticum$Leaf_number[11] / Data.triticum$Leaf_number[5]
+STI06_LN <- Data.triticum$Leaf_number[12] / Data.triticum$Leaf_number[6]
+
+STI100_LN <- c(STI01_LN, STI02_LN, STI03_LN, STI04_LN, STI05_LN, STI06_LN)
+
+STI_LN_Tri <- as.data.frame(STI100_LN)
+
+#Stem length
+
+STI01_SL <- Data.triticum$Stem_length[7] / Data.triticum$Stem_length[1]
+STI02_SL <- Data.triticum$Stem_length[8] / Data.triticum$Stem_length[2]
+STI03_SL <- Data.triticum$Stem_length[9] / Data.triticum$Stem_length[3]
+STI04_SL <- Data.triticum$Stem_length[10] / Data.triticum$Stem_length[4]
+STI05_SL <- Data.triticum$Stem_length[11] / Data.triticum$Stem_length[5]
+STI06_SL <- Data.triticum$Stem_length[12] / Data.triticum$Stem_length[6]
+
+STI100_SL <- c(STI01_SL, STI02_SL, STI03_SL, STI04_SL, STI05_SL, STI06_SL)
+
+STI_SL_Tri <- as.data.frame(STI100_SL)
+
+#Root length
+STI01_RL <- Data.triticum$Root_Length[7] / Data.triticum$Root_Length[1]
+STI02_RL <- Data.triticum$Root_Length[8] / Data.triticum$Root_Length[2]
+STI03_RL <- Data.triticum$Root_Length[9] / Data.triticum$Root_Length[3]
+STI04_RL <- Data.triticum$Root_Length[10] / Data.triticum$Root_Length[4]
+STI05_RL <- Data.triticum$Root_Length[11] / Data.triticum$Root_Length[5]
+STI06_RL <- Data.triticum$Root_Length[12] / Data.triticum$Root_Length[6]
+
+STI100_RL <- c(STI01_RL, STI02_RL, STI03_RL, STI04_RL, STI05_RL, STI06_RL)
+
+STI_RL_Tri <- as.data.frame(STI100_RL)
+
+
+#Fresh weight
+
+STI01_FW <- Data.triticum$Fresh_weight[7] / Data.triticum$Fresh_weight[1]
+STI02_FW <- Data.triticum$Fresh_weight[8] / Data.triticum$Fresh_weight[2]
+STI03_FW <- Data.triticum$Fresh_weight[9] / Data.triticum$Fresh_weight[3]
+STI04_FW <- Data.triticum$Fresh_weight[10] / Data.triticum$Fresh_weight[4]
+STI05_FW <- Data.triticum$Fresh_weight[11] / Data.triticum$Fresh_weight[5]
+STI06_FW <- Data.triticum$Fresh_weight[12] / Data.triticum$Fresh_weight[6]
+
+STI100_FW <- c(STI01_FW, STI02_FW, STI03_FW, STI04_FW, STI05_FW, STI06_FW)
+
+STI_FW_Tri <- as.data.frame(STI100_FW)
+
+#Dry weigth
+
+STI01_DW <- Data.triticum$Dry_weight[7] / Data.triticum$Dry_weight[1]
+STI02_DW <- Data.triticum$Dry_weight[8] / Data.triticum$Dry_weight[2]
+STI03_DW <- Data.triticum$Dry_weight[9] / Data.triticum$Dry_weight[3]
+STI04_DW <- Data.triticum$Dry_weight[10] / Data.triticum$Dry_weight[4]
+STI05_DW <- Data.triticum$Dry_weight[11] / Data.triticum$Dry_weight[5]
+STI06_DW <- Data.triticum$Dry_weight[12] / Data.triticum$Dry_weight[6]
+
+STI100_DW <- c(STI01_DW, STI02_DW, STI03_DW, STI04_DW, STI05_DW, STI06_DW)
+
+STI_DW_Tri <- as.data.frame(STI100_DW)
+
+#table
+STI_TR_100 <- data.frame(STI_LN_Tri ,STI_SL_Tri, STI_RL_Tri, STI_FW_Tri, STI_DW_Tri)
+
+#treatment 200 
+#Leaf number
+STI001_LN <- Data.triticum$Leaf_number[13] / Data.triticum$Leaf_number[1]
+STI002_LN <- Data.triticum$Leaf_number[14] / Data.triticum$Leaf_number[2]
+STI003_LN <- Data.triticum$Leaf_number[15] / Data.triticum$Leaf_number[3]
+STI004_LN <- Data.triticum$Leaf_number[16] / Data.triticum$Leaf_number[4]
+STI005_LN <- Data.triticum$Leaf_number[17] / Data.triticum$Leaf_number[5]
+STI006_LN <- Data.triticum$Leaf_number[18] / Data.triticum$Leaf_number[6]
+
+STI200_LN <- c(STI001_LN, STI002_LN, STI003_LN, STI004_LN, STI005_LN, STI006_LN)
+
+STI_LN_Tri_200 <- as.data.frame(STI100_LN)
+
+#Stem length
+
+STI001_SL <- Data.triticum$Stem_length[13] / Data.triticum$Stem_length[1]
+STI002_SL <- Data.triticum$Stem_length[14] / Data.triticum$Stem_length[2]
+STI003_SL <- Data.triticum$Stem_length[15] / Data.triticum$Stem_length[3]
+STI004_SL <- Data.triticum$Stem_length[16] / Data.triticum$Stem_length[4]
+STI005_SL <- Data.triticum$Stem_length[17] / Data.triticum$Stem_length[5]
+STI006_SL <- Data.triticum$Stem_length[18] / Data.triticum$Stem_length[6]
+
+STI200_SL <- c(STI001_SL, STI002_SL, STI003_SL, STI004_SL, STI005_SL, STI006_SL)
+
+STI_SL_Tri_200 <- as.data.frame(STI200_SL)
+
+#Root length
+STI001_RL <- Data.triticum$Root_Length[13] / Data.triticum$Root_Length[1]
+STI002_RL <- Data.triticum$Root_Length[14] / Data.triticum$Root_Length[2]
+STI003_RL <- Data.triticum$Root_Length[15] / Data.triticum$Root_Length[3]
+STI004_RL <- Data.triticum$Root_Length[16] / Data.triticum$Root_Length[4]
+STI005_RL <- Data.triticum$Root_Length[17] / Data.triticum$Root_Length[5]
+STI006_RL <- Data.triticum$Root_Length[18] / Data.triticum$Root_Length[6]
+
+STI200_RL <- c(STI001_RL, STI002_RL, STI003_RL, STI004_RL, STI005_RL, STI006_RL)
+
+STI_RL_Tri_200 <- as.data.frame(STI200_RL)
+
+
+#Fresh weight
+
+STI001_FW <- Data.triticum$Fresh_weight[13] / Data.triticum$Fresh_weight[1]
+STI002_FW <- Data.triticum$Fresh_weight[14] / Data.triticum$Fresh_weight[2]
+STI003_FW <- Data.triticum$Fresh_weight[15] / Data.triticum$Fresh_weight[3]
+STI004_FW <- Data.triticum$Fresh_weight[16] / Data.triticum$Fresh_weight[4]
+STI005_FW <- Data.triticum$Fresh_weight[17] / Data.triticum$Fresh_weight[5]
+STI006_FW <- Data.triticum$Fresh_weight[18] / Data.triticum$Fresh_weight[6]
+
+STI200_FW <- c(STI001_FW, STI002_FW, STI003_FW, STI004_FW, STI005_FW, STI006_FW)
+
+STI_FW_Tri_200 <- as.data.frame(STI200_FW)
+
+#Dry weigth
+
+STI001_DW <- Data.triticum$Dry_weight[13] / Data.triticum$Dry_weight[1]
+STI002_DW <- Data.triticum$Dry_weight[14] / Data.triticum$Dry_weight[2]
+STI003_DW <- Data.triticum$Dry_weight[15] / Data.triticum$Dry_weight[3]
+STI004_DW <- Data.triticum$Dry_weight[16] / Data.triticum$Dry_weight[4]
+STI005_DW <- Data.triticum$Dry_weight[17] / Data.triticum$Dry_weight[5]
+STI006_DW <- Data.triticum$Dry_weight[18] / Data.triticum$Dry_weight[6]
+
+STI200_DW <- c(STI001_DW, STI002_DW, STI003_DW, STI004_DW, STI005_DW, STI006_DW)
+
+STI_DW_Tri_200 <- as.data.frame(STI200_DW)
+
+#table
+STI_TR_200 <- data.frame(STI_LN_Tri_200 ,STI_SL_Tri_200 , STI_RL_Tri_200 , STI_FW_Tri_200 , STI_DW_Tri_200)
+
+####Drought####
+#Leaf number
+DTI01_LN <- Data.triticum$Leaf_number[19] / Data.triticum$Leaf_number[1]
+DTI02_LN <- Data.triticum$Leaf_number[20] / Data.triticum$Leaf_number[2]
+DTI03_LN <- Data.triticum$Leaf_number[21] / Data.triticum$Leaf_number[3]
+DTI04_LN <- Data.triticum$Leaf_number[22] / Data.triticum$Leaf_number[4]
+DTI05_LN <- Data.triticum$Leaf_number[23] / Data.triticum$Leaf_number[5]
+DTI06_LN <- Data.triticum$Leaf_number[24] / Data.triticum$Leaf_number[6]
+
+DTI_LN <- c(DTI01_LN, DTI02_LN, DTI03_LN, DTI04_LN, DTI05_LN, DTI06_LN)
+
+DTI_LN_Tri <- as.data.frame(DTI_LN)
+
+#Stem length
+
+DTI01_SL <- Data.triticum$Stem_length[19] / Data.triticum$Stem_length[1]
+DTI02_SL <- Data.triticum$Stem_length[20] / Data.triticum$Stem_length[2]
+DTI03_SL <- Data.triticum$Stem_length[21] / Data.triticum$Stem_length[3]
+DTI04_SL <- Data.triticum$Stem_length[22] / Data.triticum$Stem_length[4]
+DTI05_SL <- Data.triticum$Stem_length[23] / Data.triticum$Stem_length[5]
+DTI06_SL <- Data.triticum$Stem_length[24] / Data.triticum$Stem_length[6]
+
+DTI_SL <- c(DTI01_SL, DTI02_SL, DTI03_SL, DTI04_SL, DTI05_SL, DTI06_SL)
+
+DTI_SL_Tri <- as.data.frame(DTI_SL)
+
+#Root length
+DTI01_RL <- Data.triticum$Root_Length[19] / Data.triticum$Root_Length[1]
+DTI02_RL <- Data.triticum$Root_Length[20] / Data.triticum$Root_Length[2]
+DTI03_RL <- Data.triticum$Root_Length[21] / Data.triticum$Root_Length[3]
+DTI04_RL <- Data.triticum$Root_Length[22] / Data.triticum$Root_Length[4]
+DTI05_RL <- Data.triticum$Root_Length[23] / Data.triticum$Root_Length[5]
+DTI06_RL <- Data.triticum$Root_Length[24] / Data.triticum$Root_Length[6]
+
+DTI_RL <- c(DTI01_RL, DTI02_RL, DTI03_RL, DTI04_RL, DTI05_RL, DTI06_RL)
+
+DTI_RL_Tri <- as.data.frame(DTI_RL)
+
+
+#Fresh weight
+
+DTI01_FW <- Data.triticum$Fresh_weight[19] / Data.triticum$Fresh_weight[1]
+DTI02_FW <- Data.triticum$Fresh_weight[20] / Data.triticum$Fresh_weight[2]
+DTI03_FW <- Data.triticum$Fresh_weight[21] / Data.triticum$Fresh_weight[3]
+DTI04_FW <- Data.triticum$Fresh_weight[22] / Data.triticum$Fresh_weight[4]
+DTI05_FW <- Data.triticum$Fresh_weight[23] / Data.triticum$Fresh_weight[5]
+DTI06_FW <- Data.triticum$Fresh_weight[24] / Data.triticum$Fresh_weight[6]
+
+DTI_FW <- c(DTI01_FW, DTI02_FW, DTI03_FW, DTI04_FW, DTI05_FW, DTI06_FW)
+
+DTI_FW_Tri <- as.data.frame(DTI_FW)
+
+#Dry weigth
+
+DTI01_DW <- Data.triticum$Dry_weight[19] / Data.triticum$Dry_weight[1]
+DTI02_DW <- Data.triticum$Dry_weight[20] / Data.triticum$Dry_weight[2]
+DTI03_DW <- Data.triticum$Dry_weight[21] / Data.triticum$Dry_weight[3]
+DTI04_DW <- Data.triticum$Dry_weight[22] / Data.triticum$Dry_weight[4]
+DTI05_DW <- Data.triticum$Dry_weight[23] / Data.triticum$Dry_weight[5]
+DTI06_DW <- Data.triticum$Dry_weight[24] / Data.triticum$Dry_weight[6]
+
+DTI_DW <- c(DTI01_DW, DTI02_DW, DTI03_DW, DTI04_DW, DTI05_DW, DTI06_DW)
+
+DTI_DW_Tri <- as.data.frame(DTI_DW)
+
+#table
+DTI_TR <- data.frame(DTI_LN_Tri ,DTI_SL_Tri, DTI_RL_Tri, DTI_FW_Tri, DTI_DW_Tri)
+```
+
+```{r MFV}
+####MFV AVENA####
+#MFV leaf number 
+MFV_1 <- (STI_ln_1 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+MFV_2 <- (STI_ln_2 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+MFV_3 <- (STI_ln_3 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+MFV_4 <- (STI_ln_4 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+MFV_5 <- (STI_ln_5 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+MFV_6 <- (STI_ln_6 - min(STI100_AV_LN)) / (max(STI100_AV_LN) - min(STI100_AV_LN))
+
+MFV100_AV_LN <- c(MFV_1, MFV_2, MFV_3, MFV_4, MFV_5, MFV_6)
+
+#MFV stem length 
+MFV_1_sl <- (STI_sl_1 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+MFV_2_sl <- (STI_sl_2 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+MFV_3_sl <- (STI_sl_3 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+MFV_4_sl <- (STI_sl_4 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+MFV_5_sl <- (STI_sl_5 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+MFV_6_sl <- (STI_sl_6 - min(STI100_AV_SL)) / (max(STI100_AV_SL) - min(STI100_AV_SL))
+
+MFV100_AV_SL <- c(MFV_1_sl, MFV_2_sl, MFV_3_sl, MFV_4_sl, MFV_5_sl, MFV_6_sl)
+
+#MFV Root length 
+MFV_1_rl <- (STI_rl_1 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+MFV_2_rl <- (STI_rl_2 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+MFV_3_rl <- (STI_rl_3 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+MFV_4_rl <- (STI_rl_4 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+MFV_5_rl <- (STI_rl_5 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+MFV_6_rl <- (STI_rl_6 - min(STI100_AV_RL)) / (max(STI100_AV_RL) - min(STI100_AV_RL))
+
+MFV100_AV_RL <- c(MFV_1_rl, MFV_2_rl, MFV_3_rl, MFV_4_rl, MFV_5_rl, MFV_6_rl)
+
+#MFV Fresh weight
+MFV_1_fw <- (STI_fw_1 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+MFV_2_fw <- (STI_fw_2 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+MFV_3_fw <- (STI_fw_3 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+MFV_4_fw <- (STI_fw_4 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+MFV_5_fw <- (STI_fw_5 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+MFV_6_fw <- (STI_fw_6 - min(STI100_AV_FW)) / (max(STI100_AV_FW) - min(STI100_AV_FW))
+
+MFV100_AV_FW <- c(MFV_1_fw, MFV_2_fw, MFV_3_fw, MFV_4_fw, MFV_5_fw, MFV_6_fw)
+
+#MFV Dry weight
+
+MFV_1_dw <- (STI_dw_1 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+MFV_2_dw <- (STI_dw_2 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+MFV_3_dw <- (STI_dw_3 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+MFV_4_dw <- (STI_dw_4 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+MFV_5_dw <- (STI_dw_5 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+MFV_6_dw <- (STI_dw_6 - min(STI100_AV_DW)) / (max(STI100_AV_DW) - min(STI100_AV_DW))
+
+MFV100_AV_DW <- c(MFV_1_dw, MFV_2_dw, MFV_3_dw, MFV_4_dw, MFV_5_dw, MFV_6_dw)
+
+MFV_AV <-data.frame("MFV_Leaf_number"=mean(MFV100_AV_LN),"MFV_Stem_Length"=mean(MFV100_AV_SL),"MFV_Root_Length"= mean(MFV100_AV_RL),"MFV_Fresh_weight"= mean(MFV100_AV_FW), "MFV_Dry_weight"=mean(MFV100_AV_DW))
+
+####MFV AVENA 200####
+#MFV leaf number 
+MFV_01 <- (STI_ln_01 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+MFV_02 <- (STI_ln_02 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+MFV_03 <- (STI_ln_03 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+MFV_04 <- (STI_ln_04 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+MFV_05 <- (STI_ln_05 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+MFV_06 <- (STI_ln_06 - min(STI200_AV_LN)) / (max(STI200_AV_LN) - min(STI200_AV_LN))
+
+MFV200_AV_LN <- c(MFV_01, MFV_02, MFV_03, MFV_04, MFV_05, MFV_06)
+
+
+#MFV stem length 
+MFV_01_sl <- (STI_sl_01 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+MFV_02_sl <- (STI_sl_02 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+MFV_03_sl <- (STI_sl_03 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+MFV_04_sl <- (STI_sl_04 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+MFV_05_sl <- (STI_sl_05 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+MFV_06_sl <- (STI_sl_06 - min(STI200_AV_SL)) / (max(STI200_AV_SL) - min(STI200_AV_SL))
+
+MFV200_AV_SL <- c(MFV_01_sl, MFV_02_sl, MFV_03_sl, MFV_04_sl, MFV_05_sl, MFV_06_sl)
+
+#MFV Root length 
+MFV_01_rl <- (STI_rl_01 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+MFV_02_rl <- (STI_rl_02 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+MFV_03_rl <- (STI_rl_03 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+MFV_04_rl <- (STI_rl_04 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+MFV_05_rl <- (STI_rl_05 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+MFV_06_rl <- (STI_rl_06 - min(STI200_AV_RL)) / (max(STI200_AV_RL) - min(STI200_AV_RL))
+
+MFV200_AV_RL <- c(MFV_01_rl, MFV_02_rl, MFV_03_rl, MFV_04_rl, MFV_05_rl, MFV_06_rl)
+
+#MFV Fresh weight
+MFV_01_fw <- (STI_fw_01 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+MFV_02_fw <- (STI_fw_02 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+MFV_03_fw <- (STI_fw_03 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+MFV_04_fw <- (STI_fw_04 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+MFV_05_fw <- (STI_fw_05 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+MFV_06_fw <- (STI_fw_06 - min(STI200_AV_FW)) / (max(STI200_AV_FW) - min(STI200_AV_FW))
+
+MFV200_AV_FW <- c(MFV_01_fw, MFV_02_fw, MFV_03_fw, MFV_04_fw, MFV_05_fw, MFV_06_fw)
+
+#MFV Dry weight
+
+MFV_01_dw <- (STI_dw_01 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+MFV_02_dw <- (STI_dw_02 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+MFV_03_dw <- (STI_dw_03 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+MFV_04_dw <- (STI_dw_04 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+MFV_05_dw <- (STI_dw_05 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+MFV_06_dw <- (STI_dw_06 - min(STI200_AV_DW)) / (max(STI200_AV_DW) - min(STI200_AV_DW))
+
+MFV200_AV_DW <- c(MFV_01_dw, MFV_02_dw, MFV_03_dw, MFV_04_dw, MFV_05_dw, MFV_06_dw)
+
+MFV200_AV <-data.frame("MFV_Leaf_number"=mean(MFV200_AV_LN),"MFV_Stem_Length"=mean(MFV200_AV_SL),"MFV_Root_Length"= mean(MFV200_AV_RL),"MFV_Fresh_weight"= mean(MFV200_AV_FW), "MFV_Dry_weight"=mean(MFV200_AV_DW))
+
+####DROUGHT AV####
+#MFV leaf number 
+MFV_001 <- (DTI_ln_01 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+MFV_002 <- (DTI_ln_02 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+MFV_003 <- (DTI_ln_03 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+MFV_004 <- (DTI_ln_04 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+MFV_005 <- (DTI_ln_05 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+MFV_006 <- (DTI_ln_06 - min(DTI_AV_LN)) / (max(DTI_AV_LN) - min(DTI_AV_LN))
+
+MFV_D_AV_LN <- c(MFV_001, MFV_002, MFV_003, MFV_004, MFV_005, MFV_006)
+
+
+#MFV stem length 
+MFV_001_sl <- (DTI_sl_01 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+MFV_002_sl <- (DTI_sl_02 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+MFV_003_sl <- (DTI_sl_03 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+MFV_004_sl <- (DTI_sl_04 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+MFV_005_sl <- (DTI_sl_05 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+MFV_006_sl <- (DTI_sl_06 - min(DTI_AV_SL)) / (max(DTI_AV_SL) - min(DTI_AV_SL))
+
+MFV_D_AV_SL <- c(MFV_001_sl, MFV_002_sl, MFV_003_sl, MFV_004_sl, MFV_005_sl, MFV_006_sl)
+
+#MFV Root length 
+MFV_001_rl <- (DTI_rl_01 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+MFV_002_rl <- (DTI_rl_02 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+MFV_003_rl <- (DTI_rl_03 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+MFV_004_rl <- (DTI_rl_04 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+MFV_005_rl <- (DTI_rl_05 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+MFV_006_rl <- (DTI_rl_06 - min(DTI_AV_RL)) / (max(DTI_AV_RL) - min(DTI_AV_RL))
+
+MFV_D_AV_RL <- c(MFV_001_rl, MFV_002_rl, MFV_003_rl, MFV_004_rl, MFV_005_rl, MFV_006_rl)
+
+#MFV Fresh weight
+MFV_001_fw <- (DTI_fw_01 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+MFV_002_fw <- (DTI_fw_02 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+MFV_003_fw <- (DTI_fw_03 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+MFV_004_fw <- (DTI_fw_04 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+MFV_005_fw <- (DTI_fw_05 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+MFV_006_fw <- (DTI_fw_06 - min(DTI_AV_FW)) / (max(DTI_AV_FW) - min(DTI_AV_FW))
+
+MFV_D_AV_FW <- c(MFV_001_fw, MFV_002_fw, MFV_003_fw, MFV_004_fw, MFV_005_fw, MFV_006_fw)
+
+#MFV Dry weight
+
+MFV_001_dw <- (DTI_dw_01 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+MFV_002_dw <- (DTI_dw_02 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+MFV_003_dw <- (DTI_dw_03 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+MFV_004_dw <- (DTI_dw_04 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+MFV_005_dw <- (DTI_dw_05 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+MFV_006_dw <- (DTI_dw_06 - min(DTI_AV_DW)) / (max(DTI_AV_DW) - min(DTI_AV_DW))
+
+MFV_D_AV_DW <- c(MFV_001_dw, MFV_002_dw, MFV_003_dw, MFV_004_dw, MFV_005_dw, MFV_006_dw)
+
+MFV_D_AV <-data.frame("MFV_Leaf_number"=mean(MFV_D_AV_LN),"MFV_Stem_Length"=mean(MFV_D_AV_SL),"MFV_Root_Length"= mean(MFV_D_AV_RL),"MFV_Fresh_weight"= mean(MFV_D_AV_FW), "MFV_Dry_weight"=mean(MFV_D_AV_DW))
+
+MFV_AV <- data.frame(MFV_AV, MFV200_AV, MFV_D_AV)
+
+
+####MFV TRITICUM 100####
+
+#MFV leaf number 
+MFV_1_T <- (STI01_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+MFV_2_T <- (STI02_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+MFV_3_T <- (STI03_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+MFV_4_T <- (STI04_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+MFV_5_T <- (STI05_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+MFV_6_T <- (STI06_LN - min(STI100_LN)) / (max(STI100_LN) - min(STI100_LN))
+
+MFV100_TR_LN <- c(MFV_1_T, MFV_2_T, MFV_3_T, MFV_4_T, MFV_5_T, MFV_6_T)
+
+#MFV stem length 
+MFV_1_T_SL <- (STI01_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+MFV_2_T_SL <- (STI02_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+MFV_3_T_SL <- (STI03_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+MFV_4_T_SL <- (STI04_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+MFV_5_T_SL <- (STI05_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+MFV_6_T_SL <- (STI06_SL - min(STI100_SL)) / (max(STI100_SL) - min(STI100_SL))
+
+MFV100_TR_SL <- c(MFV_1_T_SL, MFV_2_T_SL, MFV_3_T_SL, MFV_4_T_SL, MFV_5_T_SL, MFV_6_T_SL)
+
+#MFV Root length
+
+MFV_1_T_RL <- (STI01_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+MFV_2_T_RL <- (STI02_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+MFV_3_T_RL <- (STI03_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+MFV_4_T_RL <- (STI04_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+MFV_5_T_RL <- (STI05_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+MFV_6_T_RL <- (STI06_RL - min(STI100_RL)) / (max(STI100_RL) - min(STI100_RL))
+
+MFV100_TR_RL <- c(MFV_1_T_RL, MFV_2_T_RL, MFV_3_T_RL, MFV_4_T_RL, MFV_5_T_RL, MFV_6_T_RL)
+
+#MFV Fresh weight
+MFV_1_T_FW <- (STI01_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+MFV_2_T_FW <- (STI02_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+MFV_3_T_FW <- (STI03_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+MFV_4_T_FW <- (STI04_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+MFV_5_T_FW <- (STI05_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+MFV_6_T_FW <- (STI06_FW - min(STI100_FW)) / (max(STI100_FW) - min(STI100_FW))
+
+MFV100_TR_FW <- c(MFV_1_T_FW, MFV_2_T_FW, MFV_3_T_FW, MFV_4_T_FW, MFV_5_T_FW, MFV_6_T_FW)
+
+#MFV Dry weight
+MFV_1_T_DW <- (STI01_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+MFV_2_T_DW <- (STI02_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+MFV_3_T_DW <- (STI03_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+MFV_4_T_DW <- (STI04_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+MFV_5_T_DW <- (STI05_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+MFV_6_T_DW <- (STI06_DW - min(STI100_DW)) / (max(STI100_DW) - min(STI100_DW))
+
+MFV100_TR_DW <- c(MFV_1_T_DW, MFV_2_T_DW, MFV_3_T_DW, MFV_4_T_DW, MFV_5_T_DW, MFV_6_T_DW)
+
+
+MFV_TRI <-data.frame("MFV_Leaf_number"=mean(MFV100_TR_LN),"MFV_Stem_Length"=mean(MFV100_TR_SL),"MFV_Root_Length"= mean(MFV100_TR_RL),"MFV_Fresh_weight"= mean(MFV100_TR_FW), "MFV_Dry_weight"=mean(MFV100_TR_DW))
+
+####MFV TRITICUM 200####
+#MFV leaf number 
+
+MFV_01_T <- (STI001_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+MFV_02_T <- (STI002_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+MFV_03_T <- (STI003_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+MFV_04_T <- (STI004_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+MFV_05_T <- (STI005_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+MFV_06_T <- (STI006_LN - min(STI200_LN)) / (max(STI200_LN) - min(STI200_LN))
+
+MFV200_TR_LN <- c(MFV_01_T, MFV_02_T, MFV_03_T, MFV_04_T, MFV_05_T, MFV_06_T)
+#MFV stem length 
+
+MFV_01_T_SL <- (STI001_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+MFV_02_T_SL <- (STI002_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+MFV_03_T_SL <- (STI003_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+MFV_04_T_SL <- (STI004_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+MFV_05_T_SL <- (STI005_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+MFV_06_T_SL <- (STI006_SL - min(STI200_SL)) / (max(STI200_SL) - min(STI200_SL))
+
+MFV200_TR_SL <- c(MFV_01_T_SL, MFV_02_T_SL, MFV_03_T_SL, MFV_04_T_SL, MFV_05_T_SL, MFV_06_T_SL)
+#MFV Root length 
+MFV_01_T_RL <- (STI001_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+MFV_02_T_RL <- (STI002_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+MFV_03_T_RL <- (STI003_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+MFV_04_T_RL <- (STI004_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+MFV_05_T_RL <- (STI005_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+MFV_06_T_RL <- (STI006_RL - min(STI200_RL)) / (max(STI200_RL) - min(STI200_RL))
+
+MFV200_TR_RL <- c(MFV_01_T_RL, MFV_02_T_RL, MFV_03_T_RL, MFV_04_T_RL, MFV_05_T_RL, MFV_06_T_RL)
+
+#MFV Fresh weight
+MFV_01_T_FW <- (STI001_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+MFV_02_T_FW <- (STI002_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+MFV_03_T_FW <- (STI003_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+MFV_04_T_FW <- (STI004_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+MFV_05_T_FW <- (STI005_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+MFV_06_T_FW <- (STI006_FW - min(STI200_FW)) / (max(STI200_FW) - min(STI200_FW))
+
+MFV200_TR_FW <- c(MFV_01_T_FW, MFV_02_T_FW, MFV_03_T_FW, MFV_04_T_FW, MFV_05_T_FW, MFV_06_T_FW)
+
+#MFV Dry weight
+MFV_01_T_DW <- (STI001_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+MFV_02_T_DW <- (STI002_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+MFV_03_T_DW <- (STI003_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+MFV_04_T_DW <- (STI004_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+MFV_05_T_DW <- (STI005_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+MFV_06_T_DW <- (STI006_DW - min(STI200_DW)) / (max(STI200_DW) - min(STI200_DW))
+
+MFV200_TR_DW <- c(MFV_01_T_DW, MFV_02_T_DW, MFV_03_T_DW, MFV_04_T_DW, MFV_05_T_DW, MFV_06_T_DW)
+
+
+MFV200_TR <-data.frame("MFV_Leaf_number"=mean(MFV200_TR_LN),"MFV_Stem_Length"=mean(MFV200_TR_SL),"MFV_Root_Length"= mean(MFV200_TR_RL),"MFV_Fresh_weight"= mean(MFV200_TR_FW), "MFV_Dry_weight"=mean(MFV200_TR_DW))
+
+####DROUGHT####
+#MFV leaf number 
+MFV_001_T_LN <- (DTI01_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+MFV_002_T_LN <- (DTI02_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+MFV_003_T_LN <- (DTI03_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+MFV_004_T_LN <- (DTI04_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+MFV_005_T_LN <- (DTI05_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+MFV_006_T_LN <- (DTI06_LN - min(DTI_LN)) / (max(DTI_LN) - min(DTI_LN))
+
+MFV_D_TR_LN <- c(MFV_001_T_LN, MFV_002_T_LN, MFV_003_T_LN, MFV_004_T_LN, MFV_005_T_LN, MFV_006_T_LN)
+
+#MFV stem length 
+MFV_001_T_SL <- (DTI01_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+MFV_002_T_SL <- (DTI02_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+MFV_003_T_SL <- (DTI03_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+MFV_004_T_SL <- (DTI04_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+MFV_005_T_SL <- (DTI05_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+MFV_006_T_SL <- (DTI06_SL - min(DTI_SL)) / (max(DTI_SL) - min(DTI_SL))
+
+MFV_D_TR_SL <- c(MFV_001_T_SL, MFV_002_T_SL, MFV_003_T_SL, MFV_004_T_SL, MFV_005_T_SL, MFV_006_T_SL)
+
+#MFV Root length 
+MFV_001_T_RL <- (DTI01_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+MFV_002_T_RL <- (DTI02_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+MFV_003_T_RL <- (DTI03_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+MFV_004_T_RL <- (DTI04_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+MFV_005_T_RL <- (DTI05_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+MFV_006_T_RL <- (DTI06_RL - min(DTI_RL)) / (max(DTI_RL) - min(DTI_RL))
+
+MFV_D_TR_RL <- c(MFV_001_T_RL, MFV_002_T_RL, MFV_003_T_RL, MFV_004_T_RL, MFV_005_T_RL, MFV_006_T_RL)
+
+#MFV Fresh weight
+#MFV Root length 
+MFV_001_T_FW <- (DTI01_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+MFV_002_T_FW <- (DTI02_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+MFV_003_T_FW <- (DTI03_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+MFV_004_T_FW <- (DTI04_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+MFV_005_T_FW <- (DTI05_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+MFV_006_T_FW <- (DTI06_FW - min(DTI_FW)) / (max(DTI_FW) - min(DTI_FW))
+
+MFV_D_TR_FW <- c(MFV_001_T_FW, MFV_002_T_FW, MFV_003_T_FW, MFV_004_T_FW, MFV_005_T_FW, MFV_006_T_FW)
+
+#MFV Dry weight
+MFV_001_T_DW <- (DTI01_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+MFV_002_T_DW <- (DTI02_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+MFV_003_T_DW <- (DTI03_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+MFV_004_T_DW <- (DTI04_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+MFV_005_T_DW <- (DTI05_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+MFV_006_T_DW <- (DTI06_DW - min(DTI_DW)) / (max(DTI_DW) - min(DTI_DW))
+
+MFV_D_TR_DW <- c(MFV_001_T_DW, MFV_002_T_DW, MFV_003_T_DW, MFV_004_T_DW, MFV_005_T_DW, MFV_006_T_DW)
+
+MFV_D_TR <-data.frame("MFV_Leaf_number"=mean(MFV_D_TR_LN),"MFV_Stem_Length"=mean(MFV_D_TR_SL),"MFV_Root_Length"= mean(MFV_D_TR_RL),"MFV_Fresh_weight"= mean(MFV_D_TR_FW), "MFV_Dry_weight"=mean(MFV_D_TR_DW))
+
+
+MFV_TR <- data.frame(MFV_TRI, MFV200_TR, MFV_D_TR)
+```
+
+```{r MFV barplot}
+AV_100 <- mean(c(MFV_AV[,1], MFV_AV[,2], MFV_AV[,3], MFV_AV[,4], MFV_AV[,5]))
+AV_200 <- mean(c(MFV_AV[,6], MFV_AV[,7], MFV_AV[,8], MFV_AV[,9], MFV_AV[,10]))
+AV_drought <- mean(c(MFV_AV[,11], MFV_AV[,12], MFV_AV[,13], MFV_AV[,14], MFV_AV[,15]))
+AV <- c(AV_100, AV_200, AV_drought)
+
+
+TR_100 <- mean(c(MFV_TR[,1], MFV_TR[,2], MFV_TR[,3], MFV_TR[,4], MFV_TR[,5]))
+TR_200 <- mean(c(MFV_TR[,6], MFV_TR[,7], MFV_TR[,8], MFV_TR[,9], MFV_TR[,10]))
+TR_drought <- mean(c(MFV_TR[,11], MFV_TR[,12], MFV_TR[,13], MFV_TR[,14], MFV_TR[,15]))
+TR <- c(TR_100, TR_200, TR_drought)
+
+# Make table
+MFVV <- c(AV, TR)
+MFV_Treat <- c("100mM", "200mM", "Drought", "100mM", "200mM", "Drought")
+MFV_Species <- c("Avena", "Avena", "Avena", "Triticum", "Triticum", "Triticum")
+MFV_table <- data.frame(Treatment = MFV_Treat, Species = MFV_Species, MFV = MFVV )
+
+ggplot(data=MFV_table, aes(x=Treatment, y=MFV, fill=Species)) +
+  geom_bar(stat="identity", position=position_dodge())+ 
+  labs(title="MVF barplots under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+

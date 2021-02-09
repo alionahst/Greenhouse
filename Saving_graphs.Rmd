@@ -37,38 +37,152 @@ library(ggplot2)
 
 ```
 
-```{r Leaf number}
+```{r Leaf number change}
 # Leaf number
-ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = Leaf_number, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of leaf number in A. fatua", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
-ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = Leaf_number, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of leaf number in T. aestivum", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = Leaf_number, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of leaf number in A. fatua", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = Leaf_number, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of leaf number in T. aestivum", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
-ggplot(Data, aes(x=Date2, y = Leaf_number, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of leaf number evolution between A. fatua and T. aestivum", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data, aes(x=Date2, y = Leaf_number, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of leaf number change between A. fatua and T. aestivum", y="Leaf number", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
 ```
 
-```{r Stem length}
-ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = Stem_length, color = Treatment, na.rm=TRUE )) + geom_smooth()  + labs(title="Evolution of stem length in A. fatua", y="Stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
-ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = Stem_length, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of stem length in T. aestivum", y="Stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+```{r Stem length change}
+ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = Stem_length, color = Treatment, na.rm=TRUE )) + geom_smooth()  + labs(title="Change of stem length in A. fatua", y="Stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = Stem_length, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of stem length in T. aestivum", y="Stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
-ggplot(Data, aes(x=Date2, y = Stem_length, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of stem length evolution between A. fatua and T. aestivum", y="stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5)) 
+ggplot(Data, aes(x=Date2, y = Stem_length, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of stem length change between A. fatua and T. aestivum", y="stem length (cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5)) 
 ```
 
-```{r RH}
-ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = RH, color = Treatment, na.rm=TRUE )) + geom_smooth()  + labs(title="Evolution of relative humidity in A. fatua", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+```{r RH change}
+ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = RH, color = Treatment, na.rm=TRUE )) + geom_smooth()  + labs(title="Change of relative humidity in A. fatua", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 # Test statistical difference between 100mM and control for RH. 
-ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = RH, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of relative humidity in T. aestivum", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = RH, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of relative humidity in T. aestivum", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
-ggplot(Data, aes(x=Date2, y = RH, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of relative humidity evolution between A. fatua and T. aestivum", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data, aes(x=Date2, y = RH, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of relative humidity change between A. fatua and T. aestivum", y="Relative humidity (%)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 ```
 
 
-```{r EC}
+```{r EC change}
 
-ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = EC, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of EC number in A. fatua", y="EC (mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
-ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = EC, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Evolution of EC number in T. aestivum", y="EC(mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Avena",], aes(x=Date2, y = EC, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of EC number in A. fatua", y="EC (mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data[Data$Species =="Triticum",], aes(x=Date2, y = EC, color = Treatment, na.rm=TRUE )) + geom_smooth() + labs(title="Change of EC number in T. aestivum", y="EC(mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
-ggplot(Data, aes(x=Date2, y = EC, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of EC evolution between A. fatua and T. aestivum", y="EC (mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
+ggplot(Data, aes(x=Date2, y = EC, color = Treatment,  linetype = Species, na.rm=TRUE )) + geom_smooth(se=F) + labs(title="Comparison of EC change between A. fatua and T. aestivum", y="EC (mS/cm)", x="Date") + theme(plot.title = element_text(hjust = 0.5))
 
 
+```
+
+
+
+
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+#Dataframe with only the last day
+Data.last <- Data[Data$Date =="201214" , ]
+
+Data.last$Treatment <- as.factor(Data.last$Treatment)
+Data.last$Stem_length <- as.numeric(Data.last$Stem_length)
+#Treatment2 created to reorder the variables in the graph
+Data.last$Treatment2 <- factor(Data.last$Treatment, c("Control", "100", "200", "Drought"))
+```
+
+
+```{r stem length between species}
+Data.last$Stem_length <- as.numeric(Data.last$Stem_length)
+StemGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Stem_length))
+StemGraph<- StemGraph +geom_boxplot(
+  aes(fill = Species),
+  position = position_dodge(0.75)) +
+  labs(y= "Stem length (cm)", x = "Treatment")+ 
+  ggtitle("Stem length under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  annotate(geom="text", x=1, y=70, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=2, y=70, label="**", cex= 8.5, color="black")+
+  annotate(geom="text", x=3, y=70, label="ns", cex= 7, color="black")+
+  annotate(geom="text", x=4, y=70, label="ns", cex= 7, color="black")
+StemGraph
+
+```
+
+```{r stem lenght within species}
+#Stem length graph
+StemGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Stem_length))
+StemGraph<- StemGraph +geom_boxplot(
+  aes(fill = Treatment2),
+  position = position_dodge(0.75)) +
+  labs(y= "Stem length (cm)", x = "Treatment")+
+  facet_wrap(~Species)+ 
+  theme(legend.position = "none")+
+  ggtitle("Stem length under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
+StemGraph
+```
+
+```{r leaf number within species}
+#Leaf number graph
+Data.last$Leaf_number <- as.numeric(Data.last$Leaf_number)
+LeafGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Leaf_number))
+LeafGraph<- LeafGraph +geom_boxplot(
+  aes(fill = Treatment2),
+  position = position_dodge(0.75)) +
+  labs(y= "Leaves number", x = "Treatment")+
+  facet_wrap(~Species)+ 
+  theme(legend.position = "none") +
+  ggtitle("Leaf number under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
+LeafGraph
+```
+
+```{r root length within species}
+#Root length graph
+Data.last$Root_Length <- as.numeric(Data.last$Root_Length)
+RootGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Root_Length))
+RootGraph<- RootGraph +geom_boxplot(
+  aes(fill = Treatment2),
+  position = position_dodge(0.75)) +
+  labs(y= "Root Length (cm)", x = "Treatment")+
+  facet_wrap(~Species)+ 
+  theme(legend.position = "none")+
+  ggtitle("Root length under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
+RootGraph
+```
+
+```{r fresh weight within species}
+#Fresh weight graph 
+Data.last$Fresh_weight <- as.numeric(Data.last$Fresh_weight)
+FreshGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Fresh_weight))
+FreshGraph<- FreshGraph +geom_boxplot(
+  aes(fill = Treatment2),
+  position = position_dodge(0.75)) +
+  labs(y= "Fresh weight (g)", x = "Treatment")+
+  facet_wrap(~Species)+ 
+  theme(legend.position = "none")+
+  ggtitle("Fresh weight under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
+FreshGraph
+```
+
+```{r dry weight within species}
+#Dry weight graph
+Data.last$Dry_weight <- as.numeric(Data.last$Dry_weight)
+DryGraph<- ggplot(Data.last, aes(x = Treatment2 , y = Dry_weight))
+DryGraph<- DryGraph +geom_boxplot(
+  aes(fill = Treatment2),
+  position = position_dodge(0.75)) +
+  labs(y= "Dry weight (g)", x = "Treatment")+
+  facet_wrap(~Species)+ 
+  theme(legend.position = "none")+
+  ggtitle("Dry weight under different treatment")+ 
+  theme(plot.title = element_text(hjust = 0.5))+
+  scale_fill_manual(values=c("#00BFC4", "#F8766D","#7CAE00", "#C77CFF"))
+DryGraph
 ```
 

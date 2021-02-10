@@ -18,5 +18,5 @@ MFV_table <- data.frame(Treatment = MFV_Treat,
 library(ggplot2)
 ggplot(data=MFV_table, aes(x=Treatment, y=MFV, fill=Species)) +
   geom_bar(stat="identity", position=position_dodge())+ 
-  labs(title="MVF barplots under different treatments")+ 
+  labs(title="MFV barplots under different treatments")+ 
   theme(plot.title = element_text(hjust = 0.5))
